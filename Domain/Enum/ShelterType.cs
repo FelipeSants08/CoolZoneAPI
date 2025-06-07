@@ -2,11 +2,11 @@
 {
     public enum ShelterType
     {
-        CHURCH,
-        COMMUNITY_CENTER,
-        SHOPPING,
-        SCHOOL,
-        LIBRARY,
-        OTHER
+        CHURCH = 0,            
+        COMMUNITY_CENTER = 1,
+        SHOPPING = 2,
+        SCHOOL = 3,
+        LIBRARY = 4,           
+        OTHER = 5
     }
 }

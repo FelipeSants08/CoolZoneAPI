@@ -2,7 +2,7 @@
 {
     public enum OpeningHours
     {
-        DAYTIME,
-        NIGHTTIME,
+        DAYTIME = 0,
+        NIGHTTIME = 1,
     }
 }

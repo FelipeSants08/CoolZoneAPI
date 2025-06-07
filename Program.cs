@@ -1,8 +1,8 @@
 using CoolZoneAPI.Infraestructure.Context;
-using CoolZoneAPI.Persistence.Repositories; // Adicione este using
+using CoolZoneAPI.Persistence.Repositories; 
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-// using CoolZoneAPI.Domain.Entity; // Geralmente não é necessário aqui para o registro genérico, mas pode ser útil se for referenciado em outro lugar no Program.cs
+using System.Text.Json.Serialization;
 
 namespace CoolZoneAPI
 {
@@ -12,9 +12,13 @@ namespace CoolZoneAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                   {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(x =>
@@ -27,9 +31,12 @@ namespace CoolZoneAPI
                 });
             });
 
-            // Adicione a linha abaixo para registrar o seu repositório genérico!
-            // Isso resolverá a dependência para IRepository<City> e IRepository<ThermalShelter>
+            builder.Services.AddAutoMapper(typeof(Program));
+
+            
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+            builder.Services.AddScoped<IThermalShelterRepository, ThermalShelterRepository>();
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
@@ -38,7 +45,7 @@ namespace CoolZoneAPI
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            
 
 
             app.UseSwagger();
