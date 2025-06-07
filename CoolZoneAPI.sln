@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolZoneAPI", "CoolZoneAPI.csproj", "{42CDBD35-F7D0-4E5D-9DD2-C7AB9552418E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42CDBD35-F7D0-4E5D-9DD2-C7AB9552418E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CDBD35-F7D0-4E5D-9DD2-C7AB9552418E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CDBD35-F7D0-4E5D-9DD2-C7AB9552418E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CDBD35-F7D0-4E5D-9DD2-C7AB9552418E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0944FAB2-D7DD-48FC-8540-1A2F303B3FC2}
+	EndGlobalSection
+EndGlobal
