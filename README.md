@@ -65,3 +65,12 @@ dotnet run
 4. Acesse a documentação Swagger em:
 
 https://localhost:5001/swagger
+
+📌 Funcionalidades
+Cadastro de cidades e abrigos térmicos
+
+Listagem de abrigos por cidade
+
+Consulta por tipo de abrigo ou horário de funcionamento
+
+Integração RESTful com documentação interativa
